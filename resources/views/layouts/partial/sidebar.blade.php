@@ -3,32 +3,32 @@
                 <ul class="metismenu" id="menu">
                   
                     <li>
-                        <a class="has-arrow" href="#" aria-expanded="false">
+                    <a class="has-arrow" href="{{route('home-utama')}}" aria-expanded="false">
                             <i class="icon-home menu-icon"></i><span class="nav-text">Home</span>
                         </a>
                     </li>
                     <li>
-                        <a class="has-arrow" href="{{route('penyakit')}}" aria-expanded="false">
+                        <a class="has-arrow" href="{{route('info-penyakit')}}" aria-expanded="false">
                             <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Info Penyakit</span>
                         </a>
                     </li>
                     <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <a class="has-arrow" href="{{route('konsultasi')}}" aria-expanded="false">
                             <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">Konsultasi</span>
                         </a>
                     </li>
                     <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <a class="has-arrow" href="{{route('info-petunjuk')}}" aria-expanded="false">
                             <i class="icon-info menu-icon"></i><span class="nav-text">Info Petunjuk</span>
                         </a>
                     </li>
                     <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <a class="has-arrow" href="{{route('kontak')}}" aria-expanded="false">
                             <i class="icon-phone menu-icon"></i><span class="nav-text">Kontak</span>
                         </a>
                     </li>
                     <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <a class="has-arrow" href="{{route('login-admin')}}" aria-expanded="false">
                             <i class="icon-user menu-icon"></i><span class="nav-text">Login Admin</span>
                         </a>
                     </li>

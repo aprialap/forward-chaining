@@ -13,12 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home-utama');
-});
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/penyakit', 'PenyakitController@index')->name('penyakit');
+
+
+Route::get('/', 'UmumController@home')->name('home-utama');
+Route::get('/penyakit', 'UmumController@infoPenyakit')->name('info-penyakit');
+Route::get('/konsultasi', 'UmumController@konsultasi')->name('konsultasi');
+Route::get('/info-petunjuk', 'UmumController@infoPetunjuk')->name('info-petunjuk');
+Route::get('/kontak', 'UmumController@kontak')->name('kontak');
+Route::get('/login-admin', 'UmumController@loginAdmin')->name('login-admin');
