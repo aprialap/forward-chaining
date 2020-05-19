@@ -26,7 +26,8 @@
                             <div class="card-body pt-5">
                                 <a class="text-center" href="#"> <h4>Login Admin</h4></a>
         
-                                <form class="mt-5 mb-5 login-input">
+                                <form class="mt-5 mb-5 login-input" method="post" action="{{ route('login') }}">
+                                    @csrf
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="username" placeholder="username">
                                     </div>
