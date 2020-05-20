@@ -40,7 +40,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'namespace' => 'Adm
         Route::get('/', 'PenyakitController@index')->name('admin.penyakit');
         Route::get('/create', 'PenyakitController@create')->name('admin.penyakit.create');
         Route::post('/store', 'PenyakitController@store')->name('admin.penyakit.store');
-        Route::get('/edit/{id}', 'PenyakitController@edit')->name('admin,penyakit.edit');
+        Route::get('/edit/{id}', 'PenyakitController@edit')->name('admin.penyakit.edit');
         Route::post('/update/{id}', 'PenyakitController@update')->name('admin.penyakit.update');
         Route::get('/destroy/{id}', 'PenyakitController@destroy')->name('admin.penyakit.destroy');
     

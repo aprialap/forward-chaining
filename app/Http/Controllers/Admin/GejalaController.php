@@ -24,16 +24,26 @@ class GejalaController extends Controller
     {   
         $kode = Gejala::select('kd_gejala')->orderBy('kd_gejala', 'desc')->first();
 
-        $pecah  = explode("G", $kode->kd_gejala);
-        $number = intval($pecah[1])+1;
-        $kode   = "G".$number;
+ 
+        if ($kode != null) {
+            $pecah  = explode("G", $kode->kd_gejala);
+            $number = intval($pecah[1])+1;
+            if ($number <10) {
+                $kode   = "G0".$number;
+            }else{
+                $kode   = "G".$number;
+            }
+        }else{
+            $kode = "G01";
+        }
+       
 
         return view('admin.gejala.create', compact('kode'));
     }
 
     public function store(request $request)
     {   
-
+      
         $input = $request->except('_token');
         
         $validation = Validator::make($input,[

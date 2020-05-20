@@ -13,6 +13,7 @@
     <link href="{{asset('template/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('template/plugins/tables/css/datatable/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="{{asset('template/plugins/summernote/dist/summernote.css')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -142,7 +143,9 @@
     <script src="{{asset('template/plugins/tables/js/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('template/plugins/tables/js/datatable/dataTables.bootstrap4.min.js')}}"></script>
     <script src="{{asset('template/plugins/tables/js/datatable-init/datatable-basic.min.js')}}"></script>
-    
+    <script src="{{asset('template/plugins/summernote/dist/summernote.min.js')}}"></script>
+    <script src="{{asset('template/plugins/summernote/dist/summernote-init.js')}}"></script>
+
     <script>hljs.initHighlightingOnLoad();</script>
 
    
