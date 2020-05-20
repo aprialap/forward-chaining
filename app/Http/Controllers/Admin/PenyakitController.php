@@ -19,26 +19,86 @@ class PenyakitController extends Controller
 
     public function create()
     {
-        # code...
+        return view('admin.penyakit.create');
     }
 
     public function store(request $request)
     {
-        # code...
+        $input = $request->except('_token');
+        
+        $validation = Validator::make($input,[
+            'kd_penyakit'   => 'required',
+            'nama_penyakit' => 'required',
+            'deskripsi'     => 'required',
+ 		]); 
+
+		if ($validation->fails()) {
+            
+            $errors = $validation->errors();
+
+            return redirect()->back()->with('warning',implode("\n", $errors->all()));
+        }
+
+        $data                = new Penyakit;
+        $data->kd_penyakit   = $request->kd_penyakit;
+        $data->nama_penyakit = $request->nama_penyakit;
+        $data->deskripsi     = $request->deskripsi;
+        $data->save();
+
+        return redirect()->route('admin.penyakit')->with('success','Berhasil menambahkan data');
+
     }
 
     public function edit($id)
     {
-        # code...
+        if(!$data  = Penyakit::find($id)){
+            return redirect()->route('admin.penyakit')->with('warning', 'Data tidak ditemukan');
+		}
+
+        return view ('admin.penyakit.edit' ,compact('data'));
+
     }
 
     public function update(request $request, $id)
     {
-        # code...
+        if(!$data  = Penyakit::find($id)){
+            return redirect()->route('admin.penyakit')->with('warning', 'Data tidak ditemukan');
+        }
+        
+        $input = $request->except('_token');
+        
+        $validation = Validator::make($input,[
+            'kd_penyakit'   => 'required',
+            'nama_penyakit' => 'required',
+            'deskripsi'     => 'required',
+ 		]); 
+
+		if ($validation->fails()) {
+            
+            $errors = $validation->errors();
+
+            return redirect()->back()->with('warning',implode("\n", $errors->all()));
+        }
+
+
+        $data                = Penyakit::findOrFail($id);
+        $data->kd_penyakit   = $request->kd_penyakit;
+        $data->nama_penyakit = $request->nama_penyakit;
+        $data->deskripsi     = $request->deskripsi;
+        $data->save();
+
+        return redirect()->route('admin.penyakit')->with('success','Berhasil memperbaharui data');
     }
 
     public function destroy($id)
     {
-        # code...
+        if(!$data  = Penyakit::find($id)){
+            return redirect()->route('admin.penyakit')->with('warning', 'Data tidak ditemukan');
+        }
+
+        $data->delete();
+
+        return redirect()->route('admin.penyakit')->with('success','Berhasil menghapus data');
+
     }
 }

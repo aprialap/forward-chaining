@@ -22,7 +22,7 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                      <center> <H1>SELAMAT DATANG</H1></center>
+                      <center> <H1>SELAMAT DATANG PAKAR</H1></center>
 
                     </div>
                 </div>

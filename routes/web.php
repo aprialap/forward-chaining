@@ -32,16 +32,17 @@ Route::get('/login-admin', 'UmumController@loginAdmin')->name('login-admin');
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'namespace' => 'Admin'], function(){
 
     Route::get('/home', 'HomeController@index')->name('admin.home');
+    Route::get('/kelola', 'MenuController@kelola')->name('admin.kelola');
 
      
     //Penyakit
     Route::group(['prefix' => '/penyakit'], function() {
         Route::get('/', 'PenyakitController@index')->name('admin.penyakit');
-        Route::get('/create', 'PenyakitController@create')->name('admin.penyakit-create');
-        Route::post('/store', 'PenyakitController@store')->name('admin.penyakit-store');
-        Route::get('/edit/{id}', 'PenyakitController@edit')->name('admin,penyakit-edit');
-        Route::post('/update/{id}', 'PenyakitController@update')->name('admin.penyakit-update');
-        Route::get('/destroy/{id}', 'PenyakitController@destroy')->name('admin.penyakit-destroy');
+        Route::get('/create', 'PenyakitController@create')->name('admin.penyakit.create');
+        Route::post('/store', 'PenyakitController@store')->name('admin.penyakit.store');
+        Route::get('/edit/{id}', 'PenyakitController@edit')->name('admin,penyakit.edit');
+        Route::post('/update/{id}', 'PenyakitController@update')->name('admin.penyakit.update');
+        Route::get('/destroy/{id}', 'PenyakitController@destroy')->name('admin.penyakit.destroy');
     
     });
 

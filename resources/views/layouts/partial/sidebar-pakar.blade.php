@@ -9,23 +9,19 @@
             </li>
 
             <li>
+                <a class="has-arrow" href="{{route('admin.kelola')}}" aria-expanded="false">
+                        <i class="icon-globe menu-icon"></i><span class="nav-text">Kelola</span>
+                    </a>
+                </li>
+    
+
+            <li>
                 <a class="has-arrow" href="" aria-expanded="false">
                     <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">Informasi</span>
                 </a>
             </li>
 
-            <li >
-                <a class="has-arrow" href="#" aria-expanded="false">
-                    <i class="icon-globe menu-icon"></i> <span class="nav-text">Kelola</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="{{route('admin.penyakit')}}">Penyakit</a></li>
-                    <li><a href="{{route('admin.gejala')}}">Gejala</a></li>
-                    <li><a href="">Relasi</a></li>
-                </ul>
-            </li>
-
-         
+           
             <li>
                 <a class="has-arrow" href="#" aria-expanded="false">
                     <i class="icon-info menu-icon"></i><span class="nav-text">Hasil Konsultasi Pasien</span>
