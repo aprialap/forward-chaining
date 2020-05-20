@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{asset('template/plugins/highlightjs/styles/darkula.css')}}">
     <link href="{{asset('template/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('template/plugins/tables/css/datatable/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -98,6 +99,7 @@
             Sidebar start
         ***********************************-->
        @include('layouts.partial.sidebar-pakar')
+       @include('sweet::alert')
         <!--**********************************
             Sidebar end
         ***********************************-->

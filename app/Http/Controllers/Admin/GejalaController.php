@@ -15,17 +15,25 @@ class GejalaController extends Controller
     { 
         $data = Gejala::orderBy('kd_gejala', 'ASC')->get();
 
+     
         return view('admin.gejala.index', compact('data'));
     }
 
    
     public function create()
-    {
-        return view('admin.gejala.create');
+    {   
+        $kode = Gejala::select('kd_gejala')->orderBy('kd_gejala', 'desc')->first();
+
+        $pecah  = explode("G", $kode->kd_gejala);
+        $number = intval($pecah[1])+1;
+        $kode   = "G".$number;
+
+        return view('admin.gejala.create', compact('kode'));
     }
 
     public function store(request $request)
-    {
+    {   
+
         $input = $request->except('_token');
         
         $validation = Validator::make($input,[
@@ -42,6 +50,7 @@ class GejalaController extends Controller
         }
 
         $data            = new Gejala;
+        $data->id        = Uuid::uuid4() -> getHex();
         $data->kd_gejala = $request->kd_gejala;
         $data->gejala    = $request->gejala;
         $data->save();

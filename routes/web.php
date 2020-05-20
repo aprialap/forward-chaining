@@ -50,11 +50,11 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'namespace' => 'Adm
     //Gejala
     Route::group(['prefix' => '/gejala'], function() {
         Route::get('/', 'GejalaController@index')->name('admin.gejala');
-        Route::get('/create', 'GejalaController@create')->name('admin.gejala-create');
-        Route::post('/store', 'GejalaController@store')->name('admin.gejala-store');
-        Route::get('/edit/{id}', 'GejalaController@edit')->name('admin,gejala-edit');
-        Route::post('/update/{id}', 'GejalaController@update')->name('admin.gejala-update');
-        Route::get('/destroy/{id}', 'GejalaController@destroy')->name('admin.gejala-destroy');
+        Route::get('/create', 'GejalaController@create')->name('admin.gejala.create');
+        Route::post('/store', 'GejalaController@store')->name('admin.gejala.store');
+        Route::get('/edit/{id}', 'GejalaController@edit')->name('admin.gejala.edit');
+        Route::post('/update/{id}', 'GejalaController@update')->name('admin.gejala.update');
+        Route::get('/destroy/{id}', 'GejalaController@destroy')->name('admin.gejala.destroy');
     
     });
 });
