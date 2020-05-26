@@ -57,4 +57,16 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'namespace' => 'Adm
         Route::get('/destroy/{id}', 'GejalaController@destroy')->name('admin.gejala.destroy');
     
     });
+
+     //Relasi
+     Route::group(['prefix' => '/relasi'], function() {
+        Route::get('/', 'RelasiController@index')->name('admin.relasi');
+        Route::get('/create', 'RelasiController@create')->name('admin.relasi.create');
+        Route::post('/store', 'RelasiController@store')->name('admin.relasi.store');
+        Route::get('/edit/{id}', 'RelasiController@edit')->name('admin.relasi.edit');
+        Route::post('/update/{id}', 'RelasiController@update')->name('admin.relasi.update');
+        Route::get('/destroy/{id}', 'RelasiController@destroy')->name('admin.relasi.destroy');
+    
+    });
+
 });

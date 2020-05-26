@@ -21,7 +21,7 @@
                         <div class="general-button">
                             <a href="{{route('admin.penyakit')}}"><button type="button" class="btn mb-1 btn-info">Penyakit</button></a>
                             <a href="{{route('admin.gejala')}}"><button type="button" class="btn mb-1 btn-danger">Gejala</button></a>
-                            <a href="{{route('admin.penyakit')}}"><button type="button" class="btn mb-1 btn-success">Relasi</button></a>
+                            <a href="{{route('admin.relasi')}}"><button type="button" class="btn mb-1 btn-success">Relasi</button></a>
                         </div><br>
                         <h4 class="card-title">Daftar Gejala</h4>
                             <a href="{{route('admin.gejala.create')}}"><button type="button" class="btn mb-1 btn-primary">Tambah</button></a>
