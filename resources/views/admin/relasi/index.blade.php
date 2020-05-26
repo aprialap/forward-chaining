@@ -57,7 +57,8 @@
                                    
                                 </tbody>
                                 <tfoot>
-                                    <tr>
+                                    <tr class="text-center">
+                                        <th width="30px">No.</th>
                                         <th>Penyakit</th>
                                         <th>Gejala</th>
                                         <th>Aksi</th>
