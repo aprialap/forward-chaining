@@ -42,9 +42,9 @@ class PasienController extends Controller
         $data->no_hp          = PhoneNumber::make($request->phone, $this->isoCode);;
         $data->save();
 
-        $pasien = Pasien::where('id', $data->id)->first();
-        $gejala = Gejala::orderBy('kd_gejala', 'ASC')->get();
+        $request->session()->put('id',$data->id);
+        $request->session()->put('nama',$data->nama_lengkap);
 
-        return view('konsultasi.pertanyaan', compact('pasien','gejala'));
+        return redirect()->route('diagnosa.list')->with('success','Berhasil Registarasi');
     }
 }

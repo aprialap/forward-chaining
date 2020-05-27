@@ -81,31 +81,31 @@
                     <div class="card-body">
                         <h4 class="card-title">Hasil Diagnosa</h4>
                         <div class="alert alert-primary">Berdasarkan diagnosa yang dikumpulkan bahwa sistem meyimpulkan:</div>
-                       <table>
+                       <table class="table table-striped">
                            <tr>
-                               <th>Nama</th>
-                               <th>:</th>
-                               <th></th>
+                               <th width="150px">Nama</th>
+                               <th width="30px">:</th>
+                               <th>{{$pasien->nama_lengkap}}</th>
                            </tr>
                            <tr>
-                                <td>Umur Kehamilan</td>
-                                <td>:</td>
-                                <td></td>
+                                <th>Usia Kehamilan</th>
+                                <th>:</th>
+                                <th>{{$pasien->usia_kehamilan}} Hari</th>
                             </tr>
                             <tr>
-                                <td>Umur </td>
-                                <td>:</td>
-                                <td></td>
+                                <th>Umur </th>
+                                <th>:</th>
+                                <th>{{$pasien->umur}} tahun</th>
                             </tr>
                             <tr>
-                                <td>Alamat</td>
-                                <td>:</td>
-                                <td></td>
+                                <th>Alamat</th>
+                                <th>:</th>
+                                <th>{{$pasien->alamat}}</th>
                             </tr>
                             <tr>
-                                <td>Nama Penyakit</td>
-                                <td>:</td>
-                                <td> {{$penyakit->nama_penyakit}}</td>
+                                <th>Nama Penyakit</th>
+                                <th>:</th>
+                                <th> {{$penyakit->nama_penyakit}}</th>
                             </tr>
                        </table>
                        <hr>

@@ -76,7 +76,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <div class="alert alert-primary">Silahkan Pilih Gejala penyakit sesuai yang anda rasakan, terimakasih.</div>
+            <div class="alert alert-primary">Hallo {{session()->get('nama')}}, Silahkan Pilih Gejala penyakit sesuai yang anda rasakan, terimakasih.</div>
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Diagnosis Penyakit Berdasarkan Gejala</h4>

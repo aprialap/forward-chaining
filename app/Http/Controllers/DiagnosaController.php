@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Gejala;
 use App\Models\Penyakit;
 use App\Models\Relasi;
+use App\Models\Pasien;
 use Validator;
 
 class DiagnosaController extends Controller
@@ -20,7 +21,9 @@ class DiagnosaController extends Controller
     }
 
     public function diagnosa(request $request)
-    {   
+    {       
+
+     
 
         if($request->gejala == null){
             return redirect()->route('diagnosa.list')->with('warning', 'Anda Belum menentukan gejala, silahkan pilih gejala');
@@ -31,7 +34,9 @@ class DiagnosaController extends Controller
 
         $gejala = Relasi::with('gejala')->where('kd_penyakit', $penyakit->kd_penyakit)->get();
 
-        return view('konsultasi.hasil-diagnosa', compact('gejala','penyakit'));
+        $pasien = Pasien::where('id', session()->get('id'))->first();
+
+        return view('konsultasi.hasil-diagnosa', compact('gejala','penyakit','pasien'));
     }
 
     function knowlage($gejala)

@@ -30,7 +30,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label" for="val-email">Usia Kehamilan <span class="text-danger">*</span>
+                                    <label class="col-lg-4 col-form-label" for="val-email">Usia Kehamilan (Minggu) <span class="text-danger">*</span>
                                     </label>
                                     <div class="col-lg-6">
                                         <input type="text" class="form-control"  name="usia_kehamilan" placeholder="Masukan Usia Kehamilan">
