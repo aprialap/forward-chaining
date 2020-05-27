@@ -21,4 +21,9 @@ class Penyakit extends Model
         'deskripsi',
         'solusi'   
     ];
+
+    public function relasi()
+    {
+        return $this->hasMany('App\Models\Relasi', 'kd_penyakit', 'kd_penyakit');
+    }
 }

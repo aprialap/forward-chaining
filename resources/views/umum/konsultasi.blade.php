@@ -20,7 +20,8 @@
                     <div class="card-body">
                         
                         <div class="form-validation">
-                            <form class="form-valide" action="#" method="post">
+                        <form class="form-valide" action="{{route('pasien.registrasi')}}" method="POST">
+                            @csrf
                                 <div class="form-group row">
                                     <label class="col-lg-4 col-form-label" for="val-username">Nama<span class="text-danger">*</span>
                                     </label>

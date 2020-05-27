@@ -28,6 +28,21 @@ Route::get('/info-petunjuk', 'UmumController@infoPetunjuk')->name('info-petunjuk
 Route::get('/kontak', 'UmumController@kontak')->name('kontak');
 Route::get('/login-admin', 'UmumController@loginAdmin')->name('login-admin');
 
+ //Pasien
+ Route::group(['prefix' => '/pasien'], function() {
+    Route::post('/registrasi', 'PasienController@registrasi')->name('pasien.registrasi');
+});
+
+ //Diagnosa
+ Route::group(['prefix' => '/diagnosa'], function() {
+   
+    Route::get('/', 'DiagnosaController@index')->name('diagnosa.list');
+    Route::post('/hasil', 'DiagnosaController@diagnosa')->name('diagnosa');
+});
+
+
+
+
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'namespace' => 'Admin'], function(){
 
@@ -69,4 +84,6 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'namespace' => 'Adm
     
     });
 
+
+    
 });
