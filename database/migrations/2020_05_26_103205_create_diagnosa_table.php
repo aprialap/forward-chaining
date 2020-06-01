@@ -14,7 +14,7 @@ class CreateDiagnosaTable extends Migration
     public function up()
     {
         Schema::create('diagnosa', function (Blueprint $table) {
-            $table->id();
+            $table->string('id',32)->primary();
             $table->string('pasien_id');
             $table->string('kd_penyakit', 5);
             $table->string('tanggal_konsultasi');

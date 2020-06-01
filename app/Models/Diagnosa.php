@@ -21,4 +21,14 @@ class Diagnosa extends Model
         'kd_penyakit',
         'tanggal_konsultasi',
     ];
+
+    public function pasien()
+    {
+        return $this->belongsTo('App\Models\Pasien', 'pasien_id', 'id');
+    }
+
+    public function penyakit()
+    {
+        return $this->belongsTo('App\Models\Penyakit', 'kd_penyakit', 'kd_penyakit');
+    }
 }

@@ -7,7 +7,9 @@ use App\Models\Gejala;
 use App\Models\Penyakit;
 use App\Models\Relasi;
 use App\Models\Pasien;
+use App\Models\Diagnosa;
 use Validator;
+use Ramsey\Uuid\Uuid;
 
 class DiagnosaController extends Controller
 {    
@@ -21,20 +23,21 @@ class DiagnosaController extends Controller
     }
 
     public function diagnosa(request $request)
-    {       
-
-     
-
+    {        
         if($request->gejala == null){
             return redirect()->route('diagnosa.list')->with('warning', 'Anda Belum menentukan gejala, silahkan pilih gejala');
         }
         $diagnosa = $this->knowlage($request->gejala);
-        
         $penyakit = Penyakit::where('kd_penyakit', $diagnosa)->first();
+        $gejala   = Relasi::with('gejala')->where('kd_penyakit', $penyakit->kd_penyakit)->get();
+        $pasien   = Pasien::where('id', session()->get('id'))->first();
 
-        $gejala = Relasi::with('gejala')->where('kd_penyakit', $penyakit->kd_penyakit)->get();
-
-        $pasien = Pasien::where('id', session()->get('id'))->first();
+        $konsultasi = new Diagnosa;
+        $konsultasi->id                 = Uuid::uuid4() -> getHex();
+        $konsultasi->pasien_id          = $pasien->id;
+        $konsultasi->kd_penyakit        = $penyakit->kd_penyakit;
+        $konsultasi->tanggal_konsultasi = date('Y-m-d H:i:s');
+        $konsultasi->save();
 
         return view('konsultasi.hasil-diagnosa', compact('gejala','penyakit','pasien'));
     }

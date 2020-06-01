@@ -16,22 +16,27 @@
     
 
             <li>
-                <a class="has-arrow" href="" aria-expanded="false">
+                <a class="has-arrow" href="{{route('admin.informasi')}}" aria-expanded="false">
                     <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">Informasi</span>
                 </a>
             </li>
 
            
             <li>
-                <a class="has-arrow" href="#" aria-expanded="false">
+                <a class="has-arrow" href="{{route('admin.log-konsultasi')}}" aria-expanded="false">
                     <i class="icon-info menu-icon"></i><span class="nav-text">Hasil Konsultasi Pasien</span>
                 </a>
             </li>
             <li>
-                <a class="has-arrow" href="#" aria-expanded="false">
+            <a class="has-arrow" href="{{route('admin.tentang')}}" aria-expanded="false">
                     <i class="icon-phone menu-icon"></i><span class="nav-text">Tentang Kami</span>
                 </a>
             </li>
+            <li>
+                <a class="has-arrow" href="{{route('admin.reset-password')}}" aria-expanded="false">
+                        <i class="icon-key menu-icon"></i><span class="nav-text">Reset Password</span>
+                    </a>
+                </li>
             <li>
                 <a class="has-arrow" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
