@@ -17,7 +17,7 @@ class DiagnosaController extends Controller
     public function index()
     {
        
-        $gejala = Gejala::orderBy('kd_gejala', 'ASC')->get();
+         $gejala = Relasi::with('gejala')->orderBy('kd_gejala', 'ASC')->get();
 
         return view('konsultasi.pertanyaan', compact('gejala'));
     }
@@ -120,7 +120,7 @@ class DiagnosaController extends Controller
             || $gejala[$i] == 'G40' || $gejala[$i] == 'G41'){
 
                 $role['P07'] = $role['P07'] + 1;
-                $role['P07']['gejala'][] = $gejala[$i];
+               
             }
 
 

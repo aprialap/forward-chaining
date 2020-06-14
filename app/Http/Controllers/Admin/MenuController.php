@@ -31,11 +31,7 @@ class MenuController extends Controller
     
     }
 
-    public function tentang()
-    {
-        return view('admin.menu.tentang');
-    }
-
+    
     public function resetPassword()
     {
         return view('admin.menu.reset-password');

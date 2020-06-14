@@ -99,7 +99,7 @@
                                     @forelse ($gejala as $item)
                                     <tr>
                                         <td class="text-center">{{$loop->iteration}}</td>
-                                        <td width="500px"><span class="css-control-indicator"></span> {{$item->gejala}}</label></td>
+                                        <td width="500px"><span class="css-control-indicator"></span> {{$item->gejala->gejala}}</label></td>
                                     <td width="100px" class="text-left">  <input type="checkbox" class="css-control-input" value="{{$item->kd_gejala}}" name="gejala[]"></td> 
                                     </tr>
                                     @empty

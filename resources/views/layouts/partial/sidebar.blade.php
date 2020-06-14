@@ -28,6 +28,12 @@
                         </a>
                     </li>
                     <li>
+                        <a class="has-arrow" href="{{route('tentang')}}" aria-expanded="false">
+                                <i class="fa fa-desktop
+                                 menu-icon"></i><span class="nav-text">Tentang Kami</span>
+                            </a>
+                        </li>
+                    <li>
                         <a class="has-arrow" href="{{route('login-admin')}}" aria-expanded="false">
                             <i class="icon-user menu-icon"></i><span class="nav-text">Login Admin</span>
                         </a>

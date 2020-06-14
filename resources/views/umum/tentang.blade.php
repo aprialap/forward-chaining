@@ -1,6 +1,6 @@
-@extends('layouts.template-pakar')
+@extends('layouts.template')
 
-@section('contents-pakar')
+@section('contents')
 <div class="content-body">
 
     <div class="row page-titles mx-0">
@@ -22,7 +22,10 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                      <center> <H1>Tentang</H1></center>
+                        
+                        <p>Sistem pakar ini dibangun hanya untuk diagnosa penyakit ibu hamil dengan menggunakan metode <i>Forward Chaining</i>. Sistem ini hanya dapat digunakan oleh pakar dan pasien (ibu hamil) puskesmas kemalo abung.
+                            Terimakasih
+                            </p>
 
                     </div>
                 </div>

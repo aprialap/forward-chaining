@@ -27,7 +27,7 @@ Route::get('/konsultasi', 'UmumController@konsultasi')->name('konsultasi');
 Route::get('/info-petunjuk', 'UmumController@infoPetunjuk')->name('info-petunjuk');
 Route::get('/kontak', 'UmumController@kontak')->name('kontak');
 Route::get('/login-admin', 'UmumController@loginAdmin')->name('login-admin');
-
+Route::get('/tentang-kami', 'UmumController@tentang')->name('tentang');
  //Pasien
  Route::group(['prefix' => '/pasien'], function() {
     Route::post('/registrasi', 'PasienController@registrasi')->name('pasien.registrasi');
@@ -50,7 +50,6 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'namespace' => 'Adm
     Route::get('/kelola', 'MenuController@kelola')->name('admin.kelola');
     Route::get('/log-konsultasi', 'MenuController@logKonsultasi')->name('admin.log-konsultasi');
     Route::get('/informasi', 'MenuController@informasi')->name('admin.informasi');
-    Route::get('/tentang-kami', 'MenuController@tentang')->name('admin.tentang');
     Route::get('/reset-password', 'MenuController@resetPassword')->name('admin.reset-password');
     Route::post('/reset', 'MenuController@updatePassword')->name('admin.reset-password.store');
 

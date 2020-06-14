@@ -43,13 +43,15 @@
         ***********************************-->
         <div class="nav-header">
             <div class="brand-logo">
-                <a href="index.html">
+               
+                    <img src="{{asset('template/images/baktihusada.jpeg')}}" width="150" height="80">
+              
+              
+                {{-- <a href="index.html">
                     <b class="logo-abbr"><img src="{{asset('template/images/logo.png')}}" alt=""> </b>
                     <span class="logo-compact"><img src="{{asset('template/images/logo-compact.png')}}" alt=""></span>
-                    <span class="brand-title">
-                        <img src="{{asset('template/images/logo-text.png')}}" alt="">
-                    </span>
-                </a>
+                   
+                </a> --}}
             </div>
         </div>
         <!--**********************************
@@ -60,7 +62,7 @@
             Header start
         ***********************************-->
         <div class="header">    
-            <div class="header-content clearfix">
+            <div class="header-content clearfix " >
              
                 <div class="nav-control">
                     <div class="hamburger">
