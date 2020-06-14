@@ -18,7 +18,18 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Konsultasi</h4>
+                        <div class="alert alert-success">
+                            <h3>Petunjuk</h3>
+                            <p>
+                           1. Sebelum anda mendiagnosa penyakit anda, silahkan daftar terlebih dahulu <a href="{{route('konsultasi')}}"><i>DISINI</i></a> <br>
+                           2. Jika sudah selesai silahkan klik tombol konsultasi, <br> 
+                           3. Pilihlah gejala penyakit sesuai yang anda rasakan, <br>
+                           4. Klik tombol diagnosa,  <br>
+                           5. Hasil diagnosa, pada halaman ini anda bisa export hasil dalam format PDF 
+                            </p>
+                             <hr>
+                             <p>Terimakasih</p>
+                 </div>
                         
                     </div>
                 </div>

@@ -80,8 +80,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Hasil Diagnosa</h4>
-                        <div class="alert alert-primary">Berdasarkan diagnosa yang dikumpulkan bahwa sistem meyimpulkan:</div>
-                       <table class="table table-striped">
+                        <div class="alert alert-success">Berdasarkan diagnosa yang dikumpulkan bahwa sistem meyimpulkan:</div>
+                        <table class="table table-striped">
                            <tr>
                                <th width="150px">Nama</th>
                                <th width="30px">:</th>
@@ -119,7 +119,7 @@
                             <div class="bootstrap-label">
                                 @foreach ($gejala as $item)
                                 
-                                   <span class="label label-secondary"> {{$item->gejala->gejala}}</span>
+                                   <span class="label label-pink"> {{$item->gejala->gejala}}</span>
                                 @endforeach
                                </div>
                       
@@ -127,10 +127,14 @@
 
                         <h6>Pengobatan/Solusi : </h6>
                         <p>
-                            <textarea readonly cols="153" rows="10">  {{$penyakit->solusi}}</textarea>
+                            <textarea readonly cols="150" rows="10">  {{$penyakit->solusi}}</textarea>
                            
                         </p>
                                
+                        <div class="col-md-12 text-right">
+                            <a href="{{route('export', ['pasien' => $pasien, 'penyakit' => $penyakit])}}"> <button type="submit" class="btn btn-outline-pink">Export PDF</button></a> 
+                          </div>
+   
                     </div>
                 </div>
             </div>

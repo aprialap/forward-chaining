@@ -7,13 +7,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Forward Chaining</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="{{asset('template/image/png')}}" sizes="16x16" href="images/favicon.png">
+    <link rel="icon" type="{{asset('template/image/png')}}" sizes="16x16" href="{{asset('template/images/BaktiHusada.png')}}">
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="{{asset('template/plugins/highlightjs/styles/darkula.css')}}">
     <link href="{{asset('template/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('template/plugins/tables/css/datatable/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link href="{{asset('template/plugins/summernote/dist/summernote.css')}}" rel="stylesheet">
+    <style>
+        table.dataTable tr.even { background-color: #ffdfdf; }
+        table.dataTable thead { background-color: #e48b9a; }
+        
+    </style>
 </head>
 
 <body>

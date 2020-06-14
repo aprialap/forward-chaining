@@ -21,7 +21,14 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                      <center> <H1>informasi</H1></center>
+                        <div class="alert alert-success">
+                           <h3>Informasi</h3>
+                            <p>Jika anda tidak yakin dengan hasil diagnosa pada aplikasi ini silahkan
+                                konsultasi langsung ke dokter, demi keselamatan ibu dan janin. Karena kesalahan tidak ditanggung oleh kami
+                            </p>
+                            <hr>
+                            <p>Terimakasih</p>
+                </div>
 
                     </div>
                 </div>

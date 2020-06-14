@@ -19,9 +19,9 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="general-button">
-                            <a href="{{route('admin.penyakit')}}"><button type="button" class="btn mb-1 btn-info">Penyakit</button></a>
-                            <a href="{{route('admin.gejala')}}"><button type="button" class="btn mb-1 btn-danger">Gejala</button></a>
-                            <a href="{{route('admin.penyakit')}}"><button type="button" class="btn mb-1 btn-success">Relasi</button></a>
+                            <a href="{{route('admin.penyakit')}}"><button type="button" class="btn mb-1  btn-outline-pink">Penyakit</button></a>
+                            <a href="{{route('admin.gejala')}}"><button type="button" class="btn mb-1  btn-outline-pink">Gejala</button></a>
+                            <a href="{{route('admin.penyakit')}}"><button type="button" class="btn mb-1  btn-outline-pink">Relasi</button></a>
                         </div>
                     </div>
                 </div>

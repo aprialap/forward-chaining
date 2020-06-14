@@ -19,12 +19,12 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="general-button">
-                            <a href="{{route('admin.penyakit')}}"><button type="button" class="btn mb-1 btn-info">Penyakit</button></a>
-                            <a href="{{route('admin.gejala')}}"><button type="button" class="btn mb-1 btn-danger">Gejala</button></a>
-                            <a href="{{route('admin.relasi')}}"><button type="button" class="btn mb-1 btn-success">Relasi</button></a>
+                            <a href="{{route('admin.penyakit')}}"><button type="button" class="btn mb-1  btn-outline-pink">Penyakit</button></a>
+                            <a href="{{route('admin.gejala')}}"><button type="button" class="btn mb-1  btn-outline-pink">Gejala</button></a>
+                            <a href="{{route('admin.relasi')}}"><button type="button" class="btn mb-1  btn-outline-pink">Relasi</button></a>
                         </div><br>
                         <h4 class="card-title">Daftar Relasi</h4>
-                            <a href="{{route('admin.relasi.create')}}"><button type="button" class="btn mb-1 btn-primary">Tambah</button></a>
+                            <a href="{{route('admin.relasi.create')}}"><button type="button" class="btn mb-1 btn-outline-pink">Tambah</button></a>
                         <div class="table-responsive">
                             <table class="table table-striped table-bordered zero-configuration">
                                 <thead>
@@ -42,10 +42,10 @@
                                         <td>{{$item->kd_penyakit}} - {{$item->penyakit->nama_penyakit}}</td>
                                         <td>{{$item->kd_gejala}} - {{$item->gejala->gejala}}</td>
                                        
-                                        <td>
+                                        <td class="text-center">
                                             <div class="btn-group" discount="group">
-                                            <a href="{{route('admin.relasi.edit', $item->id)}}" class="span6 btn btn-small btn-warning btn-sm" title="Edit Data"> <i class='pe-7s-pen'></i> Ubah</a>
-                                            <a href="{{route('admin.relasi.destroy', $item->id)}}" class="span6 btn btn-small btn-danger btn-sm" title="Edit Data"  onclick="return confirm('Hapus data?');"> <i class='pe-7s-trash'></i> Hapus</a>          
+                                            <a href="{{route('admin.relasi.edit', $item->id)}}" class="span6 btn btn-small btn-outline-pink btn-sm" title="Edit Data"> <i class='pe-7s-pen'></i> Ubah</a>
+                                            <a href="{{route('admin.relasi.destroy', $item->id)}}" class="span6 btn btn-small btn-outline-pink btn-sm" title="Edit Data"  onclick="return confirm('Hapus data?');"> <i class='pe-7s-trash'></i> Hapus</a>          
                                             </div>
                                         </td>
                                     </tr>

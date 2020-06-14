@@ -2114,6 +2114,30 @@ fieldset:disabled a.btn {
     .show > .btn-outline-danger.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(255, 94, 94, 0.5); }
 
+      .btn-outline-pink {
+        color: #e48b9a;
+        background-color: transparent;
+        background-image: none;
+        border-color: #e48b9a; }
+
+        .btn-outline-pink:hover {
+          color: #fff;
+          background-color: #e48b9a;
+          border-color: #e48b9a; }
+        .btn-outline-pink:focus, .btn-outline-pink.focus {
+          box-shadow: 0 0 0 0.2rem rgba(236, 136, 136, 0.5); }
+        .btn-outline-pink.disabled, .btn-outline-pink:disabled {
+          color: #e48b9a;
+          background-color: transparent; }
+        .btn-outline-pink:not(:disabled):not(.disabled):active, .btn-outline-pink:not(:disabled):not(.disabled).active,
+        .show > .btn-outline-pink.dropdown-toggle {
+          color: #fff;
+          background-color: #e48b9a;
+          border-color: #e48b9a; }
+          .btn-outline-pink:not(:disabled):not(.disabled):active:focus, .btn-outline-pink:not(:disabled):not(.disabled).active:focus,
+          .show > .btn-outline-pink.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem rgba(236, 136, 136, 0.5); }
+
 .btn-outline-light {
   color: #f8f9fa;
   background-color: transparent;
@@ -10940,6 +10964,11 @@ table.dataTable thead .sorting::after {
 .label-secondary {
   background-color: #7571f9;
   color: #fff; }
+
+  .label-pink {
+    background-color: #e48b9a;
+    color: #fff; }
+  
 
 .label-primary {
   background-color: #9097c4;

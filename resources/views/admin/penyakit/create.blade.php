@@ -57,8 +57,8 @@
                                 
                                 <div class="form-group row">
                                     <div class="col-lg-8 ml-auto">
-                                        <button type="submit" class="btn btn-primary">Simpan</button>
-                                        <button type="submit" class="btn btn-secondary" onclick="window.history.back()"> Kembali</button>
+                                        <button type="submit" class="btn btn-outline-pink">Simpan</button>
+                                        <button type="submit" class="btn btn-outline-pink" onclick="window.history.back()"> Kembali</button>
                                     </div>
                                 </div>
                             </form>

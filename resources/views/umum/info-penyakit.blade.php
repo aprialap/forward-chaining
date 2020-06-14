@@ -13,6 +13,8 @@
     </div>
     <!-- row -->
 
+
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -21,7 +23,7 @@
                         <h4 class="card-title">Daftar Penyakit</h4>
                         <div class="table-responsive">
                             <table class="table table-striped table-bordered zero-configuration">
-                                <thead>
+                                <thead class="text-center">
                                     <tr>
                                         <th>No.</th>
                                         <th>Kode Penyakit</th>
@@ -44,7 +46,7 @@
                                     @endforelse
                                    
                                 </tbody>
-                                <tfoot>
+                                <tfoot class="text-center">
                                     <tr>
                                         <th>No.</th>
                                         <th>Kode Penyakit</th>

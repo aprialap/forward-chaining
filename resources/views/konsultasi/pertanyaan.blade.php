@@ -76,18 +76,18 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-            <div class="alert alert-primary">Hallo {{session()->get('nama')}}, Silahkan Pilih Gejala penyakit sesuai yang anda rasakan, terimakasih.</div>
+            <div class="alert alert-success">Hallo {{session()->get('nama')}}, Silahkan Pilih Gejala penyakit sesuai yang anda rasakan, terimakasih.</div>
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Diagnosis Penyakit Berdasarkan Gejala</h4>
                         <form class="form-valide" action="{{route('diagnosa')}}" method="post">
                             @csrf
                             <div class="col-md-12 text-right">
-                                <button type="submit" class="btn btn-primary">Diagnosa</button>
+                                <button type="submit" class="btn btn-outline-pink">Diagnosa</button>
                               </div>
-                            
+       
                      <div class="table-responsive">
-                            <table class="table table-striped table-bordered ">
+                            <table id="table-diagnosa" class="table table-striped table-bordered zero-configuration">
                                 <thead>
                                     <tr class="text-center">
                                         <th width="10px">No.</th>
@@ -109,7 +109,7 @@
                                     @endforelse
                                    
                                 </tbody>
-                                <tfoot>
+                                <tfoot class="text-center">
                                     <tr>
                                         <th>No.</th>
                                         <th>Gejala</th>
@@ -127,6 +127,21 @@
     </div>
     <!-- #/ container -->
 </div>
+
+
     
 @endsection
+@section('script')
+<script>
 
+
+
+    $('#table-diagnosa').DataTable( {
+        paging   : false,
+        ordering : false,
+        info     : false,
+        searching: false
+} );
+
+        </script>
+@endsection

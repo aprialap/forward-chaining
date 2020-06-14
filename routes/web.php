@@ -38,6 +38,7 @@ Route::get('/tentang-kami', 'UmumController@tentang')->name('tentang');
    
     Route::get('/', 'DiagnosaController@index')->name('diagnosa.list');
     Route::post('/hasil', 'DiagnosaController@diagnosa')->name('diagnosa');
+    Route::get('/export/{pasien}/{penyakit}', 'DiagnosaController@export')->name('export');
 });
 
 

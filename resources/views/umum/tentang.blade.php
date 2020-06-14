@@ -22,10 +22,16 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
+
+                        <div class="alert alert-success">
+                            <h3>Tentang Kami</h3>
+                            <p>Sistem pakar ini dibangun hanya untuk diagnosa penyakit ibu hamil dengan menggunakan metode <i>Forward Chaining</i>. Sistem ini hanya dapat digunakan oleh pakar dan pasien (ibu hamil) puskesmas kemalo abung.
+                                Terimakasih
+                                </p>
+
+                </div>
                         
-                        <p>Sistem pakar ini dibangun hanya untuk diagnosa penyakit ibu hamil dengan menggunakan metode <i>Forward Chaining</i>. Sistem ini hanya dapat digunakan oleh pakar dan pasien (ibu hamil) puskesmas kemalo abung.
-                            Terimakasih
-                            </p>
+                       
 
                     </div>
                 </div>

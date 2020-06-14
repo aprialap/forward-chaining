@@ -10,6 +10,7 @@ use App\Models\Pasien;
 use App\Models\Diagnosa;
 use Validator;
 use Ramsey\Uuid\Uuid;
+use PDF;
 
 class DiagnosaController extends Controller
 {    
@@ -27,6 +28,7 @@ class DiagnosaController extends Controller
         if($request->gejala == null){
             return redirect()->route('diagnosa.list')->with('warning', 'Anda Belum menentukan gejala, silahkan pilih gejala');
         }
+
         $diagnosa = $this->knowlage($request->gejala);
         $penyakit = Penyakit::where('kd_penyakit', $diagnosa)->first();
         $gejala   = Relasi::with('gejala')->where('kd_penyakit', $penyakit->kd_penyakit)->get();
@@ -144,4 +146,21 @@ class DiagnosaController extends Controller
 
           return $hasil;
     }
+
+    public function export($pasien, $penyakit)
+    {   
+
+        $data['penyakit'] = Penyakit::where('id', $penyakit)->first();
+
+        $data['gejala']   = Relasi::with('gejala')->where('kd_penyakit', $data['penyakit']->kd_penyakit)->get();
+        $data['pasien']   = Pasien::where('id', $pasien)->first();
+
+        // return $data;
+       
+        $pdf = PDF::loadView('konsultasi.export', $data);
+
+        return $pdf->download('hasil-diagnosa.pdf');
+
+    }
+  
 }
