@@ -156,8 +156,10 @@ class DiagnosaController extends Controller
         $data['pasien']   = Pasien::where('id', $pasien)->first();
 
         // return $data;
-       
-        $pdf = PDF::loadView('konsultasi.export', $data);
+   
+        $pdf = PDF::loadView('konsultasi.export', $data)
+        ->setPaper('a4','potret')->setWarnings(false)
+        ->setOptions(['dpi' => 150,  'isRemoteEnabled' => false]);
 
         return $pdf->download('hasil-diagnosa.pdf');
 

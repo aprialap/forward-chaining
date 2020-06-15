@@ -1,6 +1,6 @@
-@extends('layouts.template')
+@extends('layouts.template-pakar')
 
-@section('contents')
+@section('contents-pakar')
 
 <div class="content-body">
 
@@ -24,6 +24,9 @@
                 
                 <div class="card">
                     <div class="card-body">
+                        <div class="col-md-12 text-right">
+                            <button type="submit" class="btn btn-outline-pink" onclick="window.history.back()"> Kembali</button>
+                        </div>
                         <h4 class="card-title">Hasil Diagnosa</h4>
                         <div class="alert alert-success">Berdasarkan diagnosa yang dikumpulkan bahwa sistem meyimpulkan:</div>
                         <table class="table table-striped">

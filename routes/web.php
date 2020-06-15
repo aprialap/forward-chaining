@@ -50,6 +50,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'namespace' => 'Adm
     Route::get('/home', 'HomeController@index')->name('admin.home');
     Route::get('/kelola', 'MenuController@kelola')->name('admin.kelola');
     Route::get('/log-konsultasi', 'MenuController@logKonsultasi')->name('admin.log-konsultasi');
+    Route::get('/log-konsultasi/detail/{id}', 'MenuController@detailLog')->name('admin.log-konsultasi.detail');
     Route::get('/informasi', 'MenuController@informasi')->name('admin.informasi');
     Route::get('/reset-password', 'MenuController@resetPassword')->name('admin.reset-password');
     Route::post('/reset', 'MenuController@updatePassword')->name('admin.reset-password.store');

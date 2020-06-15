@@ -29,6 +29,7 @@
                                         <th>Pasien</th>
                                         <th>Penyakit</th>
                                         <th>Tanggal Konsultasi</th>
+                                        <th>Aksi</th>
                                      
                                        
                                     </tr>
@@ -38,9 +39,14 @@
                                     <tr>
                                         <td class="text-center">{{$loop->iteration}}</td>
                                         <td>{{$item->pasien->nama_lengkap}}</td>
-                                        <td>{{$item->penyakit->nama_penyakit}}</td>
-                                        <td>{{date('d/m/Y',strtotime($item->tanggal_konsultasi))}}</td>
-                                       
+                                        <td class="text-center">{{$item->penyakit->nama_penyakit}}</td>
+                                        <td class="text-center">{{date('d/m/Y',strtotime($item->tanggal_konsultasi))}}</td>
+                                        <td class="text-center">
+                                            <div class="btn-group" discount="group">
+                                                <a href="{{route('admin.log-konsultasi.detail', $item->id)}}" class="span6 btn btn-small btn-outline-pink btn-sm" title="Edit Data"> <i class='pe-7s-pen'></i>Detail</a>
+                                            
+                                            </div>
+                                        </td>
                                        
                                     </tr>
                                     @empty
