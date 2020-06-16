@@ -15,11 +15,11 @@
                 </li>
     
 
-            <li>
+            {{-- <li>
                 <a class="has-arrow" href="{{route('admin.informasi')}}" aria-expanded="false">
                     <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">Informasi</span>
                 </a>
-            </li>
+            </li> --}}
 
            
             <li>
