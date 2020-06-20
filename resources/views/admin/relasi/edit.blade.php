@@ -18,7 +18,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Tambah Relsi</h4>
+                        <h4 class="card-title">Edit Relasi</h4>
                         <div class="form-validation">
                             <form class="form-valide" action="{{route('admin.relasi.update', $data->id)}}" method="post">
                                 @csrf
@@ -50,8 +50,8 @@
                                 
                                 <div class="form-group row">
                                     <div class="col-lg-8 ml-auto">
-                                        <button type="submit" class="btn btn-primary">Simpan</button>
-                                        <button type="submit" class="btn btn-secondary" onclick="window.history.back()"> Kembali</button>
+                                        <button type="submit" class="btn btn-outline-pink">Simpan</button>
+                                        <button type="submit" class="btn btn-outline-pink" onclick="window.history.back()"> Kembali</button>
                                     </div>
                                 </div>
                             </form>

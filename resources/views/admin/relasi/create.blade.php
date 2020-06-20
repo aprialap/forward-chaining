@@ -18,7 +18,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Tambah Relsi</h4>
+                        <h4 class="card-title">Tambah Relasi</h4>
                         <div class="form-validation">
                             <form class="form-valide" action="{{route('admin.relasi.store')}}" method="post">
                                 @csrf
